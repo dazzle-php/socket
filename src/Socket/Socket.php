@@ -270,10 +270,10 @@ class Socket extends AsyncStream implements SocketInterface
         $verifyPeer = $this->config['ssl_verify_peer'];
         $verifyDepth = $this->config['ssl_verify_depth'];
 
+        $context = [];
         $context['socket'] = [
             'connect' => $endpoint
         ];
-
         $context['ssl'] = [
             'capture_peer_cert' => true,
             'capture_peer_chain' => true,
@@ -310,7 +310,7 @@ class Socket extends AsyncStream implements SocketInterface
             $context
         );
 
-        if (!$socket || $errno)
+        if (!$socket || $errno > 0)
         {
             throw new LogicException(
                 sprintf('Could not connect socket [%s] because of error [%d; %s]', $endpoint, $errno, $errstr)

@@ -378,6 +378,7 @@ class SocketListener extends BaseEventEmitter implements SocketListenerInterface
         $reuseaddr = (bool) (isset($config['reuseaddr']) ? $config['reuseaddr'] : false);
         $reuseport = (bool) (isset($config['reuseport']) ? $config['reuseport'] : false);
 
+        $context = [];
         $context['socket'] = [
             'bindto' => $endpoint,
             'backlog' => $backlog,
@@ -385,7 +386,6 @@ class SocketListener extends BaseEventEmitter implements SocketListenerInterface
             'so_reuseaddr' => $reuseaddr,
             'so_reuseport' => $reuseport,
         ];
-
         $context['ssl'] = [
             'allow_self_signed' => !$verifySign,
             'verify_peer' => $verifyPeer,
@@ -425,7 +425,7 @@ class SocketListener extends BaseEventEmitter implements SocketListenerInterface
             $context
         );
 
-        if (!$socket || $errno)
+        if (!$socket || $errno > 0)
         {
             throw new LogicException(
                 sprintf('Could not bind socket [%s] because of error [%d; %s]', $endpoint, $errno, $errstr)
