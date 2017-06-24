@@ -1,10 +1,10 @@
 <?php
 
-namespace Kraken\Ipc\Socket;
+namespace Dazzle\Socket;
 
-use Kraken\Event\EventEmitterInterface;
-use Kraken\Loop\LoopResourceInterface;
-use Kraken\Stream\StreamBaseInterface;
+use Dazzle\Event\EventEmitterInterface;
+use Dazzle\Loop\LoopResourceInterface;
+use Dazzle\Stream\StreamBaseInterface;
 
 /**
  * @event connect : callable(object, SocketInterface)

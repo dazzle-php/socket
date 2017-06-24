@@ -1,34 +1,28 @@
-# Kraken Ipc Component
+# Dazzle Async Socket
 
-[![Build Status](https://travis-ci.org/kraken-php/framework.svg)](https://travis-ci.org/kraken-php/framework)
-[![Total Downloads](https://poser.pugx.org/kraken-php/ipc/downloads)](https://packagist.org/packages/kraken-php/ipc) 
-[![Latest Stable Version](https://poser.pugx.org/kraken-php/ipc/v/stable)](https://packagist.org/packages/kraken-php/ipc) 
-[![Latest Unstable Version](https://poser.pugx.org/kraken-php/ipc/v/unstable)](https://packagist.org/packages/kraken-php/ipc) 
-[![License](https://poser.pugx.org/kraken-php/framework/license)](https://packagist.org/packages/kraken-php/framework)
-[![Kraken Compatible](https://img.shields.io/badge/kraken-compatible-6b02af.svg)](https://github.com/kraken-php/framework)
+[![Build Status](https://travis-ci.org/dazzle-php/socket.svg)](https://travis-ci.org/dazzle-php/socket)
+[![Code Coverage](https://scrutinizer-ci.com/g/dazzle-php/socket/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/dazzle-php/socket/?branch=master)
+[![Code Quality](https://scrutinizer-ci.com/g/dazzle-php/socket/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dazzle-php/socket/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/dazzle-php/socket/v/stable)](https://packagist.org/packages/dazzle-php/socket) 
+[![Latest Unstable Version](https://poser.pugx.org/dazzle-php/socket/v/unstable)](https://packagist.org/packages/dazzle-php/socket) 
+[![License](https://poser.pugx.org/dazzle-php/socket/license)](https://packagist.org/packages/dazzle-php/socket/license)
 
-> **Note:** This repository is a part of [Kraken Framework][3], but **can be used freely as standalone library**. If you 
-are interested in more asynchronous components for PHP, check out the rest of [Kraken repository][5] or see our 
-[asynchronous application skeleton][4] example.
+<br>
+<p align="center">
+<img src="https://avatars0.githubusercontent.com/u/29509136?v=3&s=150" />
+</p>
 
 ## Description
 
-Ipc is a component that provides various models for implementing inter-process communication via asynchronous
-sockets or external services.
+Dazzle Socket is a component that implements asynchronous tcp, udp and unix socket handling for PHP. The library also provides interface for implementing self inter-process communication via external services.
 
 ## Feature Highlights
 
-Ipc features:
+Dazzle Socket features:
 
 * Asynchronous handling of incoming and outcoming messages,
 * Support for TCP, UDP and Unix sockets,
-* Support for ZeroMQ extension and ZeroMQ protocols,
-* Kraken Framework compatibility,
 * ...and more.
-
-## Examples
-
-See more examples in [official documentation][2].
 
 ## Requirements
 
@@ -38,27 +32,22 @@ See more examples in [official documentation][2].
 ## Installation
 
 ```
-composer require kraken-php/ipc
+$> composer require dazzle-php/socket
 ```
 
 ## Tests
 
-Tests are provided within our write-only [Framework repository][3].
-
-## Documentation
-
-Documentation for this module can be found in the [official documentation][2].
+```
+$> vendor/bin/phpunit -d memory_limit=1024M
+```
 
 ## Contributing
 
-This library is read-only subtree split of Kraken Framework. To make contributions, please go to [Framework repository][3].
+Thank you for considering contributing to this repository! The contribution guide can be found in the [contribution tips][1].
 
 ## License
 
-This library licensed under the MIT license, see more information in [Kraken Framework][3] license section.
+Dazzle Framework is open-sourced software licensed under the [MIT license][2].
 
-[1]: http://kraken-php.com
-[2]: http://kraken-php.com/docs/api-ipc
-[3]: https://github.com/kraken-php/framework
-[4]: https://github.com/kraken-php/kraken
-[5]: https://github.com/kraken-php
+[1]: https://github.com/dazzle-php/socket/blob/master/CONTRIBUTING.md
+[2]: http://opensource.org/licenses/MIT
