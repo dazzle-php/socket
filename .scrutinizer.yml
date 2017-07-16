@@ -1,7 +1,12 @@
 filter:
     excluded_paths:
+        - 'build/*'
+        - 'build-ci/*'
+        - 'example/*'
+        - 'example-bench/*'
         - 'test/*'
         - 'vendor/*'
+
 checks:
     php:
         return_doc_comments: true
