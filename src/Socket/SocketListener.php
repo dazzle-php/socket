@@ -3,7 +3,6 @@
 namespace Dazzle\Socket;
 
 use Dazzle\Event\BaseEventEmitter;
-use Dazzle\Throwable\Exception\Runtime\ExecutionException;
 use Dazzle\Throwable\Exception\Runtime\ReadException;
 use Dazzle\Throwable\Exception\Logic\InstantiationException;
 use Dazzle\Throwable\Exception\LogicException;
@@ -417,7 +416,7 @@ class SocketListener extends BaseEventEmitter implements SocketListenerInterface
         $context = stream_context_create($context);
 
         // Error reporting suppressed since stream_socket_server() emits an E_WARNING on failure.
-        $socket = stream_socket_server(
+        $socket = @stream_socket_server(
             $endpoint,
             $errno,
             $errstr,
