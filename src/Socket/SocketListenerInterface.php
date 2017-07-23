@@ -4,12 +4,12 @@ namespace Dazzle\Socket;
 
 use Dazzle\Event\EventEmitterInterface;
 use Dazzle\Loop\LoopResourceInterface;
-use Dazzle\Stream\StreamBaseInterface;
+use Dazzle\Stream\StreamDataInterface;
 
 /**
  * @event connect : callable(object, SocketInterface)
  */
-interface SocketListenerInterface extends EventEmitterInterface, LoopResourceInterface, StreamBaseInterface
+interface SocketListenerInterface extends EventEmitterInterface, LoopResourceInterface, StreamDataInterface
 {
     /**
      * Star listener and underlying resource object.
@@ -21,7 +21,7 @@ interface SocketListenerInterface extends EventEmitterInterface, LoopResourceInt
     /**
      * Stop listener and underlying resource object. It is an alias for close() method.
      *
-     * @see StreamBaseInterface::close
+     * @see StreamDataInterface::close
      */
     public function stop();
 

@@ -2,14 +2,14 @@
 
 namespace Dazzle\Socket;
 
-use Dazzle\Stream\AsyncStreamInterface;
+use Dazzle\Stream\StreamInterface;
 
-interface SocketInterface extends AsyncStreamInterface
+interface SocketInterface extends StreamInterface
 {
     /**
      * Stop listener and underlying resource object. It is an alias for close() method.
      *
-     * @see StreamBaseInterface::close
+     * @see StreamDataInterface::close
      */
     public function stop();
 

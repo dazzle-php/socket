@@ -3,14 +3,14 @@
 namespace Dazzle\Socket;
 
 use Dazzle\Loop\LoopInterface;
-use Dazzle\Stream\AsyncStream;
+use Dazzle\Stream\Stream;
 use Dazzle\Throwable\Exception\Logic\InstantiationException;
 use Dazzle\Throwable\Exception\Runtime\ExecutionException;
 use Dazzle\Throwable\Exception\LogicException;
 use Error;
 use Exception;
 
-class Socket extends AsyncStream implements SocketInterface
+class Socket extends Stream implements SocketInterface
 {
     /**
      * @var string
